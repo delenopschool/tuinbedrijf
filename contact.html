@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Contact - Tuinbedrijf</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #a35202;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: #52c902;
+    color: white;
+  }
+  .topnav .icon {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  .content {
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #a35202;
+    font-size: 2.5em;
+    animation: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+  .contact-form button {
+    background-color: #52c902;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .contact-form button:hover {
+    background-color: #45a049;
+  }
+  .footer {
+    background-color: #a35202;
+    color: white;
+    padding: 20px;
+    margin-bottom: -10000;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+  }
+  .footer a {
+    color: #f2f2f2;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+      .banner {  
+74         position: relative;  
+75           white-space: nowrap; /* Zorgt ervoor dat de tekst in één regel blijft */  
+76           overflow: hidden; /* Verbergt de tekst buiten het element */  
+77         background-color: #52c902;  
+78         color: red;  
+79         font-size: 1.5em;  
+80         font-weight: bold;  
+81         padding: 20px;  
+82       }  
+83
+  
+84         .banner span {  
+85         display: inline-block;  
+86         position: relative;  
+87           animation: slide 10s linear infinite; /* Continu glijden met herhaling */  
+88       }  
+89
+  
+90         @keyframes slide {  
+91           from {  
+92             transform: translateX(100%); /* Start buiten het element, rechts */  
+93         }  
+94           to {  
+95             transform: translateX(-100%); /* Eindigt buiten het element, links */  
+96         }  
+97       }
+
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+  <a href="news.html">Prijzen</a>
+  <a href="contact.html" class="active">Contact</a>
+  <a href="about.html">Over Ons</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<div class="banner">
+  Goed nieuws! Tuinbedrijf is weer beschikbaar sinds de lente. Neem contact met ons op en laat ons u helpen met uw tuin en klusjes.
+</div>
+<div class="content">
+  <h1>Neem Contact Op</h1>
+  <p>Heeft u vragen of wilt u meer weten over onze diensten? Neem gerust contact met ons op door het onderstaande formulier in te vullen. We kijken ernaar uit om van u te horen!</p>
+  
+  <div class="contact-form">
+    <form action="https://formspree.io/f/mldgqlqk" method="POST" id="my-form">
+      <input type="text" id="name" name="name" placeholder="Uw naam" required>
+      <input type="email" id="email" name="email" placeholder="Uw e-mailadres" required>
+      <textarea id="message" name="message" rows="5" placeholder="Uw bericht" required></textarea>
+      <button id="my-form-button" type="submit">Verzenden</button>
+      <p id="my-form-status"></p>
+    </form>
+  </div>
+</div>
+
+<div class="footer">
+  <p>&copy; 2025 Tuinbedrijf. Alle rechten voorbehouden.</p>
+  <p>
+    <a href="index.html">Home</a> | 
+    <a href="contact.html">Contact</a> | 
+    <a href="about.html">Over Ons</a>
+  </p>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Bedankt voor uw Bericht, we nemen zo snel mogelijk contact met u op.";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oeps! Er was een probleem met het versturen van het formulier"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oeps! Er was een probleem met het versturen van het formulier"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
+  
+</body>
+</html>

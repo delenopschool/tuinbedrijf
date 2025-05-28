@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/zRj6qQB/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error - Tuinbedrijf</title>
+  <link rel="stylesheet" href="topnav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            width: 250px;
+            height: 250px;
+            margin: 20px 0;
+        }
+        .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-size: 10px;
+}
+.hb {
+  color: red;
+}
+/*knop*/
+.button{
+    background: linear-gradient(45deg, #00ff00, #ff0000); /* Gradient van rood naar lichter rood */
+    background-size: 200% 100%; /* Zorgt ervoor dat de gradient groter is dan de knop */
+    border: none; /* Geen rand */
+    color: white; /* Witte tekst */
+    padding: 15px 32px; /* Opvulling */
+    text-align: center; /* Tekst centreren */
+    text-decoration: none; /* Geen onderstreping */
+    display: inline-block; /* Inline blok */
+    font-size: 16px; /* Lettergrootte */
+    margin: 4px 2px; /* Marges */
+    cursor: pointer; /* Cursor veranderen bij hover */
+    border-radius: 12px; /* Ronde hoeken */
+    transition: background-position 0.5s ease, transform 0.3s ease; /* Overgangseffecten */
+    background-position: right; /* Startpositie van de gradient */
+}
+.button:hover {
+    transform: scale(1.05); /* Knop iets vergroten bij hover */
+}
+      .banner {  
+74         position: relative;  
+75         white-space: nowrap; /* Zorgt ervoor dat de tekst in één regel blijft */  
+76         overflow: hidden; /* Verbergt de tekst buiten het element */  
+77         background-color: #52c902;  
+78         color: red;  
+79         font-size: 1.5em;  
+80         font-weight: bold;  
+81         padding: 20px;  
+82       }  
+83
+  
+84         .banner span {  
+85         display: inline-block;  
+86         position: relative;  
+87           animation: slide 10s linear infinite; /* Continu glijden met herhaling */  
+88       }  
+89
+  
+90         @keyframes slide {  
+91           from {  
+92             transform: translateX(100%); /* Start buiten het element, rechts */  
+93         }  
+94           to {  
+95             transform: translateX(-100%); /* Eindigt buiten het element, links */  
+96         }  
+97       }
+
+    </style>
+<body>
+<div class="topnav" id="myTopnav">
+  <a href="/">Home</a>
+  <a href="prijzen.html">Prijzen</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">Over Ons</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+  <div class="banner">
+  Goed nieuws! Tuinbedrijf is weer beschikbaar sinds de lente. Neem contact met ons op en laat ons u helpen met uw tuin en klusjes.
+</div>
+    <!--text1-->
+    <h1>Error 404</h1>
+    <h2>Something went wrong.</h2>
+    <!--afbeelding-->
+    <img src="https://img.freepik.com/free-vector/isometric-error-background-hand-reaches-out-from-hole-with-sign-error-four-hundred-four-vector-illustration_1284-67441.jpg" alt="404 afbeelding">
+    <!--text2-->
+    <p>Sorry, de opgegeven pagina bestaat niet.</p>
+    <!--knop-->
+    <a href="https://tuinbedrijf.glitch.me"><button class="button">Terug naar de homepagina</button></a>
+</body>
+</html>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>

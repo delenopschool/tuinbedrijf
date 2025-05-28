@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Home - Tuinbedrijf</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fffff;
+        transition: background-color 0.5s;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color: #a35202;
+      }
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .topnav a:hover {
+        background-color: #ffffff;
+        color: black;
+      }
+      .topnav a.active {
+        background-color: #52c902;
+        color: white;
+      }
+      .topnav .icon {
+        display: none;
+      }
+      @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {
+          position: relative;
+        }
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+      .logo {
+        display: block;
+        margin: 20px auto;
+        height: 40%;
+        width: 40%;
+        transition: transform 0.5s;
+      }
+      .banner {
+        position: relative;
+        white-space: nowrap; /* Zorgt ervoor dat de tekst in één regel blijft */
+        overflow: hidden; /* Verbergt de tekst buiten het element */
+        background-color: #52c902;
+        color: red;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 20px;
+      }
+
+      .banner span {
+        display: inline-block;
+        position: relative;
+        animation: slide 10s linear infinite; /* Continu glijden met herhaling */
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(100%); /* Start buiten het element, rechts */
+        }
+        to {
+          transform: translateX(-100%); /* Eindigt buiten het element, links */
+        }
+      }
+
+      h1 {
+        text-align: center;
+        color: #a35202;
+        font-size: 2.5em;
+        animation: fadeIn 2s;
+      }
+      .content {
+        text-align: center;
+        padding: 20px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #52c902;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+      .button:hover {
+        background-color: #45a049;
+      }
+      .button:active {
+        background-color: #45a049;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+      .services {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+      }
+      .service {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+      .service:hover {
+        transform: translateY(-10px);
+      }
+      .service img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .service h3 {
+        margin-top: 10px;
+        color: #a35202;
+      }
+      .service p {
+        color: #666;
+      }
+      .testimonials {
+        background-color: #f9f9f9;
+        padding: 20px;
+        text-align: center;
+      }
+      .testimonial {
+        margin: 20px;
+        font-style: italic;
+        color: #555;
+      }
+      .footer {
+        background-color: #a35202;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .footer a {
+        color: #f2f2f2;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="prijzen.html">Prijzen</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">Over Ons</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="banner">
+      <span>Goed nieuws! Tuinbedrijf is weer beschikbaar sinds de lente. Neem contact met ons op en laat ons u helpen met uw tuin en klusjes.</span>
+    </div>
+
+
+    <img
+      src="https://cdn.glitch.global/09e0c3ed-6d62-430c-89cf-f25f121536ff/tuinbedrijf.gif?v=1740763129964"
+      class="logo"
+      alt="Logo Tuinbedrijf"
+    />
+
+    <h1>Klein, betrouwbaar en kwalitatief</h1>
+
+    <div class="content">
+      <p>
+        Welkom bij Tuinbedrijf, een klein, regionaal bedrijfje dat geleid wordt
+        door kinderen. Wij bieden een breed scala aan diensten aan, zoals
+        tuinonderhoud, auto wassen, en allerlei klusjes zoals heitje voor
+        karweitje.
+      </p>
+      <a href="contact.html" class="button">Neem Contact Op</a>
+    </div>
+
+    <div class="services">
+      <div class="service">
+        <h3>Tuinontwerp</h3>
+        <p>
+          Wij bieden op maat gemaakte tuinontwerpen die perfect aansluiten bij
+          uw wensen en behoeften.
+        </p>
+      </div>
+      <div class="service">
+        <h3>Tuinonderhoud</h3>
+        <p>
+          Ons team zorgt ervoor dat uw tuin er altijd op zijn best uitziet met
+          regelmatig onderhoud.
+        </p>
+      </div>
+      <div class="service">
+        <h3>Auto Wassen</h3>
+        <p>Laat uw auto stralen met onze grondige wasbeurten.</p>
+      </div>
+      <div class="service">
+        <h3>Heitje voor Karweitje</h3>
+        <p>
+          Onze jonge medewerkers helpen u graag met allerlei klusjes in en om
+          het huis.
+        </p>
+      </div>
+      <div class="service">
+        <h3>Gazononderhoud</h3>
+        <p>
+          Wij houden uw gazon mooi en gezond met regelmatig maaien en bemesten.
+        </p>
+      </div>
+      <div class="service">
+        <h3>Schoonmaakdiensten</h3>
+        <p>
+          We bieden schoonmaakdiensten voor zowel binnen- als buitenruimtes.
+        </p>
+      </div>
+      <div class="service">
+        <h3>Huisdierverzorging</h3>
+        <p>
+          We zorgen voor uw huisdieren terwijl u weg bent, inclusief voeren en
+          uitlaten.
+        </p>
+      </div>
+    </div>
+
+    <div class="testimonials">
+      <h2>Wat onze klanten zeggen</h2>
+      <div class="testimonial">
+        <p>
+          "Tuinbedrijf heeft onze tuin omgetoverd tot een waar paradijs.
+          Geweldig werk door een geweldig team!" - Jan &amp; Marie
+        </p>
+      </div>
+      <div class="testimonial">
+        <p>
+          "Onze auto blinkt weer dankzij de geweldige wasbeurt van Tuinbedrijf.
+          Zeer aan te raden!" - Familie De Vries
+        </p>
+      </div>
+      <div class="testimonial">
+        <p>
+          "De kinderen van Tuinbedrijf hebben fantastisch werk geleverd met het
+          opruimen van onze tuin. Heel professioneel!" - Petra
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Tuinbedrijf. Alle rechten voorbehouden.</p>
+      <p>
+        <a href="index.html">Home</a> | <a href="contact.html">Contact</a> |
+        <a href="about.html">Over Ons</a>
+      </p>
+    </div>
+  </body>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</html>
+>
+</html>
